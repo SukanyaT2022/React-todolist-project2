@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import AddForm from './component/AddForm';
 import ToDoItems from './component/ToDoItems';
+import './App.css';
 
 const App = () => {
   //we always put usestate in parent page then passs propc to all children
@@ -25,8 +26,10 @@ const App = () => {
 
 
   return (
-    <div className='container'>
+    <div className='container customContainer'>
+    
       <div className='row mb-1 ms-1 me-1 mt-3'>
+        <br/>
         <AddForm keyAddTask={addTask}/>
       </div>
       <div className='row mb-3 ms-1 me-1 mt-3'>
