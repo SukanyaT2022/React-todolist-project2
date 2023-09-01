@@ -6,11 +6,13 @@ import './Addform.css';
 
 const AddForm = ({keyAddTask}) => {
     //this use state to hold input value
-    const[inputValue, setInputValue]= useState("")
+    const[inputValue, setInputValue]= useState('')
+    const[inputPrice, setInputPrice] = useState("")
   
     const handleAddTask =()=>{
-      keyAddTask(inputValue)
-      
+      keyAddTask({text:inputValue, price:inputPrice})
+      setInputValue('')
+      setInputPrice('')
     }
    
   return (
@@ -19,8 +21,15 @@ const AddForm = ({keyAddTask}) => {
         <h2 className='text-center'>Expense Tracking</h2>
 <div className='mt-3 mx-5 targetInput'>
     {/* below onchange do change value and install inside value */}
-<input type="text" onChange={(e)=> setInputValue(e.target.value)} value={inputValue}  />
+<input type="text" onChange={(e)=> setInputValue(e.target.value)} value={inputValue} placeholder='Items' />
 </div>
+
+{/* below price input */}
+<div className='mt-3 mx-5 targetInput'>
+    {/* below onchange do change value and install inside value */}
+<input type="text" onChange={(e)=> setInputPrice(e.target.value)} value={inputPrice} placeholder='Price' />
+</div>
+
 <div className='ml-5 targetButton'>
     <Button onClick={handleAddTask}>Add Items</Button>
 </div>

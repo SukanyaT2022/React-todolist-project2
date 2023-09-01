@@ -18,10 +18,10 @@ const App = () => {
 
   //add task take info from user and add to the old one-- update it 
   const addTask =(userInput)=>{
-    const newValue = {text: userInput, id: Math.floor(Math.random())}
+    const newValue = {text: userInput.text, id: Math.floor(Math.random()*10),price:userInput.price}
     //settodo add new value to it
     settoDoList((toDoList)=>[ ...toDoList,newValue])
-    
+  
   }
 
 
