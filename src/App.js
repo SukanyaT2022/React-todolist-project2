@@ -23,6 +23,25 @@ const App = () => {
     settoDoList((toDoList)=>[ ...toDoList,newValue])
   
   }
+// 1.state kept in parent component
+//2. put function on the same page that state that we focus
+//3.add task function take value from input text and move it to our array
+
+//remove to do list function--we filter by id to remove item from array(todolist)
+
+
+
+// simple example of removeFunction--
+// if 1 not equal to 3 so true so we keep it
+// run until if 3 not equal to 3 is false so remove it
+
+
+// const originalArray = [1, 2, 3, 4, 5];
+// const elementToFilter = 3;
+
+// const filteredArray = originalArray.filter(x => x !== elementToFilter);
+
+// console.log(filteredArray); // Output: [1, 2, 4, 5]
 
 
   return (
@@ -33,8 +52,10 @@ const App = () => {
         <AddForm keyAddTask={addTask}/>
       </div>
       <div className='row mb-3 ms-1 me-1 mt-3'>
-        <ToDoItems keytoDoList={toDoList}/>
+        <ToDoItems keytoDoList={toDoList} keysettoDoList ={settoDoList}/>
+        {/* we pass these function to toDoItem.js --pass props to child */}
       </div>
+      
     </div>
   )
 }
