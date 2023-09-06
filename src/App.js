@@ -9,8 +9,8 @@ const App = () => {
 //useState([]) is array of object to stall all data on all to do list
   const[toDoList, settoDoList] = useState([
     //after build form we remove this value after
-// {text: "Buy sugar", id: 11},
-// {text: "Buy tuna", id: 12}
+// {text: "Buy sugar",price: "$20", id: 11},
+// {text: "Buy tuna", price: "$20", id: 12}
   ])
 
   //this function below add text-take propc from child to parent from addform.js to app.js
@@ -28,20 +28,6 @@ const App = () => {
 //3.add task function take value from input text and move it to our array
 
 //remove to do list function--we filter by id to remove item from array(todolist)
-
-
-
-// simple example of removeFunction--
-// if 1 not equal to 3 so true so we keep it
-// run until if 3 not equal to 3 is false so remove it
-
-
-// const originalArray = [1, 2, 3, 4, 5];
-// const elementToFilter = 3;
-
-// const filteredArray = originalArray.filter(x => x !== elementToFilter);
-
-// console.log(filteredArray); // Output: [1, 2, 4, 5]
 
 
   return (
