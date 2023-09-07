@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ToDoItems.css';
 
+
+
 const ToDoItems = ({ keytoDoList, keysettoDoList }) => {
+  const [sortByPrice,setSortByPrice] = useState(null)
   const removeToDoItem = (id) => {
     const newTodo = keytoDoList.filter((val) => val.id !== id);
     keysettoDoList(newTodo);
     // console.log(newTodo)
   };
+
   //if not eual id so save in new todo
   // simple example of removeFunction--
   // if 1 not equal to 3 so true so we keep it
@@ -25,19 +29,32 @@ const ToDoItems = ({ keytoDoList, keysettoDoList }) => {
 // const sortToDoList = [...keysettoDoList]
 
 
+//below function to sort
+const handleSort =(order)=>{
+ keytoDoList.sort((a,b)=>{
+    if(order === 'lowToHigh'){  
+      return a.price - b.price
+      //above use sort function ---function(a, b){return a - b}
+    }else if(order === 'highToLow'){
+return b.price - a.price
+    }
+    return 0;
+  })
+  keysettoDoList(keytoDoList);
+  setSortByPrice(order)
 
-const handleSort =()=>{
-  const newArray =  keytoDoList.sort((a,b)=>b.price - a.price)
-  keysettoDoList(newArray);
-  console.log("heelo")
 }
+
 
   return (
     <ul className="mt-3">
       <div className='controlHederItemPrice'>
       <b className="">Items: </b>
       <b className='controlPrice'>Price</b>
-      <button onClick={handleSort} className='sortButton'>Sort</button>
+     <div className='sortButton'> 
+      <button onClick={()=>handleSort('lowToHigh')} >Up</button>
+      <button onClick={()=>handleSort('highToLow')} >Down</button>
+      </div>
       </div>
       {
         // we use map to loop in all keytodolist and extract id and text
