@@ -1,4 +1,47 @@
 .wrap{
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+   
+    width: 350px!important;
+    margin: 10px 0px;
+}
+.nameItem{
+width: 33%;
+}
+.priceItem{
+    width: 33%;
+   
+}
+.deleteButton{
+    width: 33%;
+    text-align: right;
+
+}
+.deleteButton button{
+
+background-color:#f1d4b7 ;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+}
+.controlPrice{
+    font-weight: bold;
+}
+.controlHederItemPrice{
+    display: flex;
+    justify-content: space-between;
+  
+    width: 350px!important;
+}
+b{
+    width: 33%;
+  
+}
+.sortButton{
+width: 33%;
+background-color:#f1d4b7 ;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+
 }

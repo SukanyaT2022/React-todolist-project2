@@ -34,13 +34,17 @@ const handleSort =()=>{
 
   return (
     <ul className="mt-3">
-      <b className="ms-3">Items:<button onClick={handleSort}>Sort</button></b>
+      <div className='controlHederItemPrice'>
+      <b className="">Items: </b>
+      <b className='controlPrice'>Price</b>
+      <button onClick={handleSort} className='sortButton'>Sort</button>
+      </div>
       {
         // we use map to loop in all keytodolist and extract id and text
         keytoDoList.map((todolist) => {
           return (
             // key={} is very important track every element on the dom
-            <div className="px-2 mt-1 mb-1 ms-2" key={todolist.id}>
+            <div className=" mt-1 mb-1" key={todolist.id}>
               <div className="wrap">
                 <div className="nameItem">{todolist.text}</div>
                 <div className="priceItem">{todolist.price}</div>

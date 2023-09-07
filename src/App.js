@@ -31,7 +31,7 @@ const App = () => {
 
 
   return (
-    <div className='container customContainer'>
+    <div className=' customContainer'>
     
       <div className='row mb-1 ms-1 me-1 mt-3'>
         <br/>
