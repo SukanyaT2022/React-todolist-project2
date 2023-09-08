@@ -52,8 +52,13 @@ return b.price - a.price
       <b className="">Items: </b>
       <b className='controlPrice'>Price</b>
      <div className='sortButton'> 
-      <button onClick={()=>handleSort('lowToHigh')} >Up</button>
-      <button onClick={()=>handleSort('highToLow')} >Down</button>
+    
+      <button onClick={()=>handleSort('lowToHigh')} className='low2high' >Low - High</button>
+   
+      <button onClick={()=>handleSort('highToLow')}className='low2high' >High - Low</button>
+  
+     
+     
       </div>
       </div>
       {

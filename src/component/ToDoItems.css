@@ -34,14 +34,18 @@ font-weight: bold;
     width: 350px!important;
 }
 b{
-    width: 33%;
+    width: 30%;
   
 }
 .sortButton{
-width: 33%;
-background-color:#f1d4b7 ;
-border: none;
-border-radius: 5px;
-font-weight: bold;
+width: 40%;
 
+
+}
+.low2high{
+    font-size: 10px;
+    border: none;
+    background-color:#f1d4b7 ;
+    margin-left: 3px;
+    font-weight: bold;
 }
